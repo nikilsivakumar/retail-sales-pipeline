@@ -69,18 +69,20 @@ silently corrupting downstream data.
 **Idempotent Redshift loads** — DELETE then COPY pattern means
 re-running the pipeline for the same date never creates duplicates.
 
-## Project structure
+## Project Structure
+
+```text
 retail-sales-pipeline/
 ├── data/
-│   └── generate_data.py          # Mock data generator
+│   └── generate_data.py
 ├── glue_jobs/
-│   └── transform_sales.py        # PySpark ETL job
+│   └── transform_sales.py
 ├── scripts/
-│   ├── upload_to_s3.py           # S3 upload utility
-│   ├── transform_local.py        # Local transformation test
-│   ├── verify_glue_output.py     # Output verification
-│   ├── fix_parquet_timestamps.py # Timestamp fix utility
-│   └── run_pipeline.py           # End-to-end pipeline runner
+│   ├── upload_to_s3.py
+│   ├── transform_local.py
+│   ├── verify_glue_output.py
+│   ├── fix_parquet_timestamps.py
+│   └── run_pipeline.py
 ├── retail_dbt/
 │   └── models/
 │       ├── staging/
@@ -93,10 +95,10 @@ retail-sales-pipeline/
 │           └── mart_customer_cohorts.sql
 ├── airflow/
 │   └── dags/
-│       └── sales_pipeline_dag.py # Airflow DAG definition
+│       └── sales_pipeline_dag.py
 └── sql/
-└── redshift_ddl.sql          # Table definitions
-
+    └── redshift_ddl.sql
+```
 ## How to run
 
 **Full pipeline (one command):**
