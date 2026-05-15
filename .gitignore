@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Virtual environment (never commit this)
+venv/
+aimore/
+.venv/
+env/
+
+# Data files (generated locally, too large for GitHub)
+data/sample/*.csv
+data/processed/
+data/sample/
+
+# dbt
+retail_dbt/target/
+retail_dbt/dbt_packages/
+retail_dbt/logs/
+
+# Airflow
+airflow/
+logs/
+airflow.db
+airflow.cfg
+
+# AWS credentials (NEVER commit)
+.aws/
+*.pem
+credentials
+*.env
+.env
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# VS Code
+.vscode/

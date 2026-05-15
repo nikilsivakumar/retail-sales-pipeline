@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: mart_sales_by_region
+    description: "Monthly revenue by region and category"
+    columns:
+      - name: month
+        tests:
+          - not_null
+      - name: region
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: mart_product_performance
+    description: "Product level performance metrics"
+    columns:
+      - name: product_name
+        tests:
+          - not_null
+
+  - name: mart_customer_cohorts
+    description: "Cohort retention analysis"
+    columns:
+      - name: cohort_month
+        tests:
+          - not_null

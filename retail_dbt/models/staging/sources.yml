@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: retail_raw
+    database: dev
+    schema: staging
+    tables:
+      - name: sales_raw
+        description: "Raw sales loaded from S3 via Glue ETL"
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+          - name: unit_price
+            tests:
+              - not_null
